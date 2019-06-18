@@ -1,0 +1,547 @@
+html, body { width: 100%; height: 100%; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Noto Sans HK', sans-serif;
+	font-weight: 300;
+}
+ul, li { list-style: none; }
+a {
+	color: inherit;
+	text-decoration: none;
+}
+button {
+	border: none;
+	background: none;
+}
+input {
+	border: none;
+	display: block;
+}
+@media ( max-width: 980px ) {
+  body { width: auto; }
+}
+header {
+	position: fixed !importent;
+	table-layout:fixed !importent;
+	z-index: 5;
+}
+*:focus {
+	outline: none;
+}
+/*font*/
+/*font-family: 'Merriweather', serif;*/
+
+/*-------header--------*/
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%
+    position: fixed;
+}
+.heder_wrap {
+	position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1320px;
+    height: 160px;
+}
+.logo {
+	margin: 0 50px;
+}
+.index_list {
+	margin: 50px;
+}
+.list {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 390px;
+    font-size: 15px;
+    color: black;
+}
+.list>a> li {
+	color: black;
+}
+.li1:hover {
+	text-decoration: line-through;
+	color: black;
+}
+.li2:hover {
+	text-decoration: line-through;
+	color: black;
+}
+.li3:hover {
+	text-decoration: line-through;
+	color: black;
+}
+.li4:hover {
+	text-decoration: line-through;
+	color: black;
+}
+/*햄버거버튼*/
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 25px;
+    height: 42px;
+    margin: 0 70px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: 1px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 10px;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 10px;
+}
+
+/* type-01 */
+/* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+    -webkit-transform: translateY (10px) rotate (-45deg);
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+    -webkit-transform: translateY(-10px) rotate(45deg);
+    transform: translateY(-10px) rotate(45deg);
+}
+
+/*----햄버거버튼 누르면 나오는 인덱스-----*/
+.ham_index {
+	color: black;
+	text-align: center;
+	font-size: 3.5em;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-top: 70px;
+}
+.ham_wrap {
+	z-index: 3;
+	position: absolute;
+    top: 100%;
+    background-color: white;
+    width: 100%;
+    height: 400%;
+}
+.ham_footer {
+	text-align: center;
+	margin: 50px 0 0 0;
+	color: black;
+}
+.ft {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 150px;
+    font-size: 23px;
+}
+.in-icon1 {
+	color: black;
+	opacity: .5;
+}
+.in-icon1:hover {
+	transition: .3s;
+	opacity: 1;
+}
+.in-icon2 {
+	color: black;
+	opacity: .5;
+}
+.in-icon2:hover {
+	transition: .3s;
+	opacity: 1;
+}
+.in-icon3 {
+	color: black;
+	opacity: .5;
+}
+/*----login modal-----*/
+.lo_modal {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.modal_box {
+	width: 300px;
+	height: 420px;
+	background-color: white;
+	border-radius: 5px;
+}
+.modal_wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+.lo_modal_close {
+	margin-top: 50px;
+	cursor: pointer;
+	color: #afafaf;
+}
+.lo_modal_close:hover {
+	transition: .3s;
+	color: #70D6C7;
+	cursor: pointer;
+}
+.lo_modal_title {
+	padding: 30px 0;
+	font-size: 1.7em;
+	color: #212121;
+}
+.ip_style {
+	margin-bottom: 10px;
+}
+.ip_style >input {
+	padding: 5px 0;
+	border-bottom: 1px solid #dadada;
+	width: 210px;
+	height: 12px;
+}
+.lo_btn {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 13px;
+	font-weight: lighter;
+	background-color: #dadada;
+	border-radius: 2px;
+	width: 210px;
+	height: 35px;
+	cursor: pointer;
+	color: white;
+}
+.lo_btn:hover {
+	background-color: #70D6C7;
+	transition: .3s;
+}
+.forgot {
+	margin-top: 5px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #dadada;
+}
+.forgot:hover {
+	color: #70D6C7;
+}
+.err_msg {
+	font-size: 11px;
+    color: tomato;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 115px;
+}
+
+/*-------footer--------*/
+.all_footer {
+	background-color: gray;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.fo_title {
+	color: white;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 30px 0;
+}
+.line {
+	background-color: white;
+	width: 2px;
+	height: 50px;
+	margin: 0 auto;
+}
+.fo_content {
+	margin: 30px 0;
+	color: white;
+	font-size: 0.7em;
+	font-weight: lighter;
+	text-align: center;
+	line-height: 23px;
+	height: 140px;
+}
+
+
+/*-------회원가입---------*/
+.join_wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 130%;
+}
+.join { 
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.jo_title {
+	font-size: 1em;
+	padding: 70px 0;
+}
+.join_frm {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.terms_wrap {
+	display: flex;
+	line-height: 17px;
+}
+.terms {
+	font-size: 10px;
+	text-align: left;
+	letter-spacing: -0.3px;
+}
+.ck_off {
+	color: #dadada;
+	padding: 10px 10px 10px 0;
+}
+.ck_off:hover {
+	color: #70D6C7;
+	cursor: pointer;
+	transition: .3s;
+}
+.ck_on {
+	color: #70D6C7;
+	cursor: pointer;
+	display: none;
+	padding: 10px 10px 10px 0;
+}
+.tr1 {
+	text-decoration: underline;
+	font-weight: 300;
+}
+.jo_btn {
+	margin-top: 30px;
+	margin-bottom: 100px;
+	font-size: 13px;
+	font-weight: lighter;
+	background-color: #dadada;
+	border-radius: 2px;
+	width: 210px;
+	height: 35px;
+	cursor: pointer;
+	color: white;
+}
+.jo_btn:hover {
+	background-color: #70D6C7;
+	transition: .3s;
+}
+
+
+
+
+
+
+
+/*----회원탈퇴-----*/
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 0 20px;
+}
+
+.box h3 {
+	text-align: center;
+	font-size: 17px;
+	color: tomato;
+	margin-bottom: 15px;
+	letter-spacing: -1px;
+}
+.delete_text {
+	font-size: 11px;
+	text-align: left;
+	font-weight: bold;
+}
+.pl_msg {
+	margin: 30px 0;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/*----회원탈퇴시 나오는 모달창----*/
+.de_modal {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+}
+.de_modal_box {
+	width: 300px;
+	height: 420px;
+	background-color: white;
+	border-radius: 2px;
+	margin: 0  auto;
+}
+.de_modal_wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+.lo_modal_close {
+	margin-top: 50px;
+	cursor: pointer;
+	color: #afafaf;
+}
+.lo_modal_close:hover {
+	transition: .3s;
+	color: #70D6C7;
+	cursor: pointer;
+}
+.de_modal_title {
+	padding: 30px 0;
+	font-size: 1.7em;
+	color: #212121;
+}
+.ip_style {
+	margin-bottom: 10px;
+}
+.ip_style >input {
+	padding: 5px 0;
+	border-bottom: 1px solid #dadada;
+	width: 210px;
+	height: 12px;
+}
+.de_btn_wrap {
+	display: flex;
+
+}
+.de_btn {
+	margin: 10px 10px;
+	font-size: 13px;
+	font-weight: lighter;
+	background-color: #dadada;
+	border-radius: 2px;
+	width: 100px;
+	height: 35px;
+	cursor: pointer;
+	color: white;
+}
+.de_yes{
+	background-color: #70D6C7;
+}
+.de_icon {
+	margin-bottom: 10px;
+	color: #70D6C7;
+	font-size: 5em;
+}
+
+
+
+/*----------Find Account---------*/
+.find_all {
+	display: flex;
+	flex-flow: column;
+}
+.find_title {
+	color: #5D5D5D;
+	width: auto;
+	padding: 10px;
+	display: inline-block;
+	margin-bottom: 40px;
+    font-size: .9em;
+    font-weight: bold;
+    padding: 3px;
+}
+/*id 찾았을 때 뜨는 모달창*/
+.modal_box {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+.id_mo_box {
+	width: 300px;
+	height: 200px;
+}
+.id_modal_close {
+	margin-top: 0;
+}
+.id_te {
+	padding: 15px;
+	font-size: 1.2em;
+	font-weight: 400;
+	color: #5D5D5D;
+}
+.find_user {
+	color: #70D6C7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
