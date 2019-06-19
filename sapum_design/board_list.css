@@ -330,11 +330,11 @@ header {
     height: auto;
     background-color: white;
     border-radius: 10px;
-    padding: 50px;
+    padding: 30px;
     margin: 0 13%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-flow: column;
 }
 .detail_delete {
     position: absolute;
@@ -1141,70 +1141,63 @@ body {
 	width: 100%;
 	height: auto;
 	padding: 100px 0;
+	position: relative;
 }
-.board_wrap {
-	padding: 0 110px;
+.sort_wrap {
 	display: flex;
-	flex-flow: column;
+	justify-content: space-between;
+	width: 300px;
+	color: #4C4C4C;
+	margin: 24px 50px 0 50px;
+}
+.now {
+	color: #70D6C7;
+}
+.sort_type {
+	letter-spacing: .3px;
+}
+.sort_box {
+	border-bottom: 3px solid #4C4C4C;
+}
+.now_line {
+	border-bottom: 3px solid #70D6C7;
+}
+.table {
+	margin-top: 80px;
+	display: flex;
 	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+	width: 100%;
+}
+tr{
+	border-top: 1px solid pink;
+}
+table {
+	width: 90%;
 	text-align: center;
 }
-.list_column {
-	background-color: gray;
-	padding: 20px 10px;
-	display: flex;
-	border-radius: 5px;
-	box-shadow: 2px 2px 2px 0px rgba(0,0,0,.1);
+tr {
+	padding: 5px 0;
+}
+#column {
+	background-color: #70D6C7;
 	color: white;
-	font-size: .9em;
-	font-weight: 600;
+    font-weight: bold;
+    font-size: .9em;
+    height: 40px;
 }
-.list_content {
-	background-color: white;
-	padding: 8px;
-	display: flex;
-	border-radius: 5px;
-	box-shadow: 2px 2px 2px 0px rgba(0,0,0,.1);
-	margin: 7px 0;
-	color: #444;
-	font-size: 1em;
-	font-weight: 300;
+.board_content {
+	height: 30px;
 }
-.con_first {
-	margin-top: 20px;
+table tr:nth-child(odd) {
+	background-color: #F6F6F6;
 }
-.con_gray {
-	background-color: #EAEAEA;
+#con_title {
+	cursor: pointer;
 }
-.no {
-	flex: .7;
-	border-right: 1px solid #dadada;
-	padding-right: 10px;
-}
-.tit {
-	flex: 3;
-	border-right: 1px solid #dadada;
-}
-.wri {
-	flex: 2;
-	border-right: 1px solid #dadada;
-}
-.date {
-	flex: 2;
-	border-right: 1px solid #dadada;
-}
-.lik {
-	flex: 1;
-	border-right: 1px solid #dadada;
-}
-.vie {
-	flex: 1;
-	border-right: 1px solid #dadada;
-}
-.att {
-	padding-left: 10px;
-	flex: 1.3;
-}
+
+
 /*페이지네이션 디자인*/
 .pagenation {
 	margin-top: 60px;
@@ -1225,18 +1218,37 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: #4C4C4C;
 }
 .arrow_btn {
-	width: 60px;
-	border: 2px solid #70D6C7;
+	width: 70px;
+	height: 28px;
+	background-color: #70D6C7;
+	color: white;
+	font-size: .9em;
+	text-align: center;
+	display: flex;
+	align-items: center;
 }
-
-
-
-
-
-
-
+.dot {
+	color: #dadada;
+	font-size: .8em;
+}
+.arro_text{
+	margin-bottom: 4px;
+	padding: 5px;
+}
+.now_click {
+	width: 28px;
+	height: 28px;
+	background-color: #70D6C7;
+	border-right: 20px;
+	color: white;
+	font-weight: 400;
+}
+.arrow_btn:hover {
+	background-color: #68bcae;
+}
 
 
 

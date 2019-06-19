@@ -470,6 +470,8 @@ header {
 	font-size: .8em;
 	padding: 0 10px;
 	transition: .3s;
+	padding: 15px;
+	resize: none;
 }
 .user_wrap {
 	display: flex;
@@ -507,7 +509,7 @@ header {
     color: white;
     background-color: #70D6C7;
     border-radius: 5px;
-    width: 90px;
+    width: 120px;
     height: 30px;
     cursor: pointer;
 }
@@ -542,10 +544,10 @@ header {
 	cursor: pointer;
 }
 .de_up_btn {
-	display: inline-block;
+	display: flex;
 	margin-top: 20px;
 	width: all;
-	float: right;
+	justify-content: space-between;
 }
 .mo_btn {
 	margin-left: 10px;
@@ -645,7 +647,47 @@ header {
 	margin-top: 30px;
 }
 
-
+/*---삭제모달창---*/
+/*--삭제 모달창 디자인--*/
+.delete_title {
+	font-size: 1.5em;
+	text-align: center;
+}
+.btn_wrap {
+	display: flex;
+}
+.n_btn {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: lighter;
+	background-color: #dadada;
+	border-radius: 2px;
+	width: 100px;
+	height: 35px;
+	cursor: pointer;
+	color: white;
+}
+.n_btn:hover {
+	background-color: #70D6C7;
+	transition: .3s;
+}
+.warring {
+	font-size: 6em;
+	color: #70D6C7;
+	display: inherit;
+	margin: 20px 0;
+}
+.btn_wrap {
+	display: flex;
+	justify-content: space-between;
+	width: 220px;
+}
+.de_modal_title {
+	padding: 30px 0 10px 0;
+	font-size: 1.5em;
+	color: #212121;
+}
 
 
 

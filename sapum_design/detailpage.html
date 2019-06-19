@@ -62,10 +62,10 @@
 	</header>
 	<div class="header_box"></div>
 	<!-- login modal -->
-	<div class="lo_modal" style="display: none;">
+	<div id="lo_modal" class="lo_modal" style="display: none;">
 		<div class="modal_box">
 			<form class="modal_wrap" action="" method="" name="">
-				<span class="lo_modal_close"><i class="fas fa-times"></i></span>
+				<span id="lo_modal_close" class="lo_modal_close"><i class="fas fa-times"></i></span>
 				<h1 class="lo_modal_title">Signin</h1>
 				<div class="ip_style ip_id">
 					<input class="ip_border" type="text" name="id" placeholder="User ID">
@@ -123,16 +123,30 @@
 								<span class="comm_user">lim</span>
 							</span>
 							<div class="conn_inp">
-								<input class="comm_inp" type="text" name="" placeholder="Add a Comment">
+								<textarea class="comm_inp" placeholder="write your comment"></textarea>
 							</div>
 							<input type="hidden" name="id" class="comment_userid" value="">
 							<button type="button" class="cmt_add_btn"><i class="fas fa-plus"></i></button>
 						</form>
 					</div>
 					<div class="de_up_btn">
-						<button type="button" class="follow_btn re_btn">Remove</button>
+						<button type="button" id="work_delete_btn" class="follow_btn re_btn">Remove</button>
 						<button type="button" class="follow_btn mo_btn">Modify</button>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- work delete modal -->
+	<div id="wo_de_modal" class="lo_modal" style="display: none;">
+		<div class="modal_box delete_modal">
+			<div class="modal_wrap">
+				<span id="wo_de_btn" class="lo_modal_close"><i class="fas fa-times"></i></span>
+				<h1 class="de_modal_title delete_title">Are you sure to<br> delete this work?</h1>
+				<span class="warring"><i class="fas fa-exclamation-circle"></i></span>
+				<div class="btn_wrap">
+					<button id="n_btn" type="button" class="n_btn">NO</button>
+					<button type="button" class="n_btn">YES</button>
 				</div>
 			</div>
 		</div>
@@ -229,10 +243,10 @@
 
 			// login누르면 모달창 나오게
 			$('.login_btn').click(function() {
-				$('.lo_modal').css('display','flex');
+				$('#lo_modal').css('display','flex');
 			});
-			$('.lo_modal_close').click(function(){
-				$('.lo_modal').css('display','none');
+			$('#lo_modal_close').click(function(){
+				$('#lo_modal').css('display','none');
 			});
 		});
 
@@ -278,6 +292,18 @@
 				$(this).css('display','none');
 			});
 			
+
+			//작품 삭제버튼 누르면 정말 삭제할거냐 물어보는 모달창
+			$('#work_delete_btn').click(function() {
+				$('#wo_de_modal').css('display', 'flex');
+			});
+			$('#n_btn').click(function() {
+				$('#wo_de_modal').css('display', 'none');
+			});
+			$('#wo_de_btn').click(function() {
+				$('#wo_de_modal').css('display', 'none');
+			});
+
 
 		});
 
